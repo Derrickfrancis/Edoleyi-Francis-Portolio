@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0f1a;
+  color: #cbd5e1;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d0f1a; }
+::-webkit-scrollbar-thumb { background: #6c63ff; border-radius: 99px; }
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px #6c63ff44;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px #6c63ff66;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #a78bfa;
+  border: 1.5px solid #6c63ff;
+  padding: 11px 26px;
+  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  background: #6c63ff18;
+}
+
+/* ── Cards ── */
+.card {
+  background: #13152b;
+  border: 1px solid #1e2140;
+  border-radius: 16px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px #0007;
+  border-color: #6c63ff55;
+}
+
+/* ── Skill card ── */
+.skill-card {
+  background: #13152b;
+  border: 1px solid #1e2140;
+  border-radius: 14px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.skill-card:hover {
+  border-color: #6c63ff55;
+  transform: translateY(-3px);
+}
+
+/* ── Project tags ── */
+.project-tag {
+  background: #1e2140;
+  color: #a78bfa;
+  font-size: 11px;
+  font-family: 'Space Mono', monospace;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Social buttons ── */
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1e2140;
+  border: 1.5px solid #2a2d50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a78bfa;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.social-btn:hover {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ── Form inputs ── */
+.input-field {
+  width: 100%;
+  background: #13152b;
+  border: 1.5px solid #1e2140;
+  color: #f1f5f9;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: #6c63ff;
+}
+
+/* ── Navbar links ── */
+.nav-link {
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #a78bfa;
+  border-bottom-color: #6c63ff;
+}
+
+/* ── Filter buttons ── */
+.filter-btn {
+  background: #13152b;
+  border: 1.5px solid #1e2140;
+  color: #94a3b8;
+  padding: 7px 18px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+/* ── Timeline dot ── */
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #6c63ff;
+  border: 3px solid #0d0f1a;
+  box-shadow: 0 0 0 2px #6c63ff44;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ── Animations ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6c63ff, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
